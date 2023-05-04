@@ -71,8 +71,8 @@ const Form = ({ getUsers, onEdit, setOnEdit }) => {
       await axios
         .put("http://localhost:8800/" + onEdit.id, {
           nome: user.nome.value,
-          email: user.sobrenome.value,
-          fone: user.idade.value,
+          sobrenome: user.sobrenome.value,
+          idade: user.idade.value,
           data_nascimento: user.data_nascimento.value,
         })
         .then(({ data }) => toast.success(data))
@@ -81,8 +81,8 @@ const Form = ({ getUsers, onEdit, setOnEdit }) => {
       await axios
         .post("http://localhost:8800", {
           nome: user.nome.value,
-          email: user.sobrenome.value,
-          fone: user.idade.value,
+          sobrenome: user.sobrenome.value,
+          idade: user.idade.value,
           data_nascimento: user.data_nascimento.value,
         })
         .then(({ data }) => toast.success(data))
